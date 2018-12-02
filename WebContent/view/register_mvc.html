@@ -1,0 +1,55 @@
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="layout.css" />
+<meta charset="UTF-8">
+<!-- 设置网页的字符编码为UTF-8 -->
+<title>用户注册</title>
+<script>
+
+function checkName(){
+var username = f.username.value;
+if(username=="") {
+alert("请输入用户名");
+}else{
+window.open("checkName.action?username="+encodeURI(username),
+"check","menubar=no,height=2,width=2，top=2");
+}
+}
+
+function check(){
+if(f.username.value==""){
+alert("用户名不能为空");
+return false;
+}else if(f.password.value=="" || f.password.value!=f.password1.value){
+alert("密码为空或两次密码不一致！");
+return false;
+}else{
+return true;
+}
+}
+</script>
+</head>
+<body id ="word">
+<h1>用户注册 <a href="login.html"> 返回 </a></h1>
+<hr>
+<form name="f" method="post" action="register.action" onSubmit="return check()">
+
+<table>
+<tr><td align="center">用户名：<td><input type="text" name="username"><td>
+<a href="javaScript:checkName()">检查用户名是否可用</a>
+<!-- 这里进行对用户名的检查 -->
+<tr><td align="center">密码：<td><input type="password" name="password">
+<tr><td align="center">密码确认：<td><input type="password" name="password1">
+<tr><td align="center">学号：<td><input type="text" name="courseid">
+<tr><td align="center">班级：<td><input type="text" name="coursename">
+<tr><td align="center">专业：<td><input type="text" name="coursesort">
+<tr><td align="center">总学分：<td><input type="text" name="credit">
+
+
+</table>
+<input type="submit" value="注册">
+<!-- 当提交时，表单会被传输到register.action中，然后在controller中进行注册操作 -->
+<input type="reset" value="重置">
+</form>
+</body>
+</html>

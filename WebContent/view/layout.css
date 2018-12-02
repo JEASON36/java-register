@@ -1,0 +1,47 @@
+/* CSS层格式控制代码 */
+@charset "UTF-8";
+#word{
+	width:500th;
+	backgrou-color:write;
+	text-align:center;
+	font-size:20px;
+	color:black;
+}
+#all{
+    margin:0px auto;
+    width:500px; /* 必须制定宽度 */
+    height:200px;
+    background-color:blue;
+}
+#string{
+    margin:0px auto;
+    width:300px; /* 必须制定宽度 */
+    height:100px;
+    background-color:write;
+    text-align:center; /* 文字居中 */
+    font-size:32px; /* 文字大小 */
+    color:black; /* 文字颜色 */
+}
+#image{
+    margin:0px auto;
+    width:300px; /* 必须制定宽度 */
+    background-color:white;
+    text-align:center; /* 图像居中 */
+    padding-top:20px; /* 图像上填充 */
+    padding-bottom:20px; /* 图像下填充 */
+}
+
+#form{
+	border:1px solid #0c1507;/* 设置边框的颜色 */
+    margin:0px auto; /* 效果等同 <tabel align="center">*/
+    width:80% /* 必须制定宽度 */
+    background-color:w=#28e335;
+    text-align:center;/* 单元格对齐 */
+    background=111.png;
+}
+/* 单元格对齐 */
+#td{
+    text-align:center;
+}
+    
+
